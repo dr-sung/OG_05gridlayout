@@ -1,4 +1,5 @@
 
+import java.awt.BorderLayout;
 import java.awt.Container;
 import java.awt.GridLayout;
 import java.awt.event.ActionEvent;
@@ -6,8 +7,6 @@ import java.awt.event.ActionListener;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
-
-// Grid Layout Demo; re-written using "array of JButtons"
 
 public class GridLayoutTester extends JFrame {
 
@@ -19,7 +18,7 @@ public class GridLayoutTester extends JFrame {
         Container contentPane = getContentPane();
         JPanel panel = new JPanel(); // JPanel's default layout manager --> Flow layout
         panel.setLayout(new GridLayout(2, 3)); // change to 2x3 Grid layout
-        contentPane.add(panel, "Center");
+        contentPane.add(panel, BorderLayout.CENTER);
 
         ButtonObserver observer = new ButtonObserver();
 
